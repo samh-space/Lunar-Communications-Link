@@ -17,7 +17,7 @@
       --accent-dim: rgba(58, 143, 255, 0.15);
       --text: #d8e8ff;
       --muted: #5a7a9a;
-      --ground: #3aff9f;
+      --earth-ground: #3aff9f;
       --geo: #3a8fff;
       --lunar: #c97aff;
       --lunar-ground: #ff9f3a;
@@ -120,7 +120,7 @@
       gap: clamp(8px, 1vw, 14px);
       font-family: 'Goldman', monospace;
       font-size: clamp(10px, 1.2vw, 16px);
-      color: var(--muted);
+      color: var(--earth-ground);
       letter-spacing: 0.1em;
     }
     
@@ -229,7 +229,7 @@
 
     .card:hover { border-color: var(--card-accent-dim); }
 
-    .card[data-seg="ground"]       { --card-accent: var(--ground); --card-accent-dim: rgba(58,255,159,0.3); --card-glow: rgba(58,255,159,0.06); animation-delay: 0.5s; }
+    .card[data-seg="ground"]       { --card-accent: var(--earth-ground); --card-accent-dim: rgba(58,255,159,0.3); --card-glow: rgba(58,255,159,0.06); animation-delay: 0.5s; }
     .card[data-seg="geo"]          { --card-accent: var(--geo);    --card-accent-dim: rgba(58,143,255,0.3); --card-glow: rgba(58,143,255,0.06); animation-delay: 0.6s; }
     .card[data-seg="lunar"]        { --card-accent: var(--lunar);  --card-accent-dim: rgba(201,122,255,0.3); --card-glow: rgba(201,122,255,0.06); animation-delay: 0.7s; }
     .card[data-seg="lunar-ground"] { --card-accent: var(--lunar-ground); --card-accent-dim: rgba(255,159,58,0.3); --card-glow: rgba(255,159,58,0.06); animation-delay: 0.8s; }
@@ -345,7 +345,7 @@
     <p class="subtitle">Documentation and analysis across four mission segments.</p>
 
     <div class="orbit-bar">
-      <div class="orbit-node"><div class="orbit-dot" style="background:var(--ground)"></div>Earth Ground</div>
+      <div class="orbit-node"><div class="orbit-dot" style="background:var(--earth-ground)"></div>Earth Ground</div>
       <span class="orbit-arrow arrow-left">&lt;</span>
       <div class="orbit-lines">
         <div class="orbit-line"></div>
