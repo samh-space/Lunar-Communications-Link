@@ -105,7 +105,9 @@
     .orbit-bar {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 0;
+      width: 100%;
       margin: 40px 0 0;
       opacity: 0;
       animation: fade-up 0.6s ease forwards 0.4s;
@@ -122,10 +124,10 @@
     }
     
     .orbit-arrow {
-    color: rgba(100, 160, 255, 0.4);
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    margin: 0;
+      color: rgba(100, 160, 255, 0.4);
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      margin: 0;
     }
     
     .orbit-arrow.arrow-left {
@@ -153,7 +155,6 @@
       background: rgba(100, 160, 255, 0.4);
       margin: 0;
       min-width: 24px;
-      max-width: 64px;
     }
     
     .orbit-lines {
@@ -163,7 +164,6 @@
       gap: 6px;
       margin: 0; 
       min-width: 24px;
-      max-width: 64px;
     }
     
     .orbit-lines .orbit-line {
@@ -331,7 +331,6 @@
 
     @media (max-width: 600px) {
       .segments { grid-template-columns: 1fr; }
-      .orbit-line { display: none; }
       footer { flex-direction: column; gap: 12px; }
     }
   </style>
@@ -368,6 +367,7 @@
       <span class="orbit-arrow arrow-right">&gt;</span>
       <div class="orbit-node"><div class="orbit-dot" style="background:var(--lunar-ground)"></div>Lunar Ground</div>
     </div>
+  </header>
 
   <!-- Segments -->
   <div class="section-label">// Mission Segments</div>
