@@ -116,9 +116,9 @@
     .orbit-node {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: clamp(8px, 1vw, 14px);
       font-family: 'Space Mono', monospace;
-      font-size: 10px;
+      font-size: clamp(10px, 1.2vw, 16px);
       color: var(--muted);
       letter-spacing: 0.1em;
     }
@@ -126,7 +126,7 @@
     .orbit-arrow {
       color: rgba(100, 160, 255, 0.4);
       font-family: 'Space Mono', monospace;
-      font-size: 12px;
+      font-size: clamp(12px, 1.4vw, 18px);
       margin: 0;
     }
     
@@ -143,15 +143,15 @@
     }
     
     .orbit-dot {
-      width: 8px;
-      height: 8px;
+      width: clamp(8px, 1vw, 14px);
+      height: clamp(8px, 1vw, 14px);
       border-radius: 50%;
       flex-shrink: 0;
     }
 
     .orbit-line {
       flex: 1;
-      height: 1px;
+      height: clamp(1px, 0.15vw, 2px);
       background: rgba(100, 160, 255, 0.4);
       margin: 0;
       min-width: 24px;
