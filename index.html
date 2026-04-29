@@ -124,6 +124,11 @@
       letter-spacing: 0.1em;
     }
     
+    .orbit-node[data-seg="earth-ground"]       { color: var(--earth-ground); }
+    .orbit-node[data-seg="geo"]          { color: var(--geo); }
+    .orbit-node[data-seg="lunar"]        { color: var(--lunar); }
+    .orbit-node[data-seg="lunar-ground"] { color: var(--lunar-ground); }
+    
     .orbit-arrow {
       color: rgba(100, 160, 255, 0.4);
       font-family: 'Goldman', monospace;
@@ -229,7 +234,7 @@
 
     .card:hover { border-color: var(--card-accent-dim); }
 
-    .card[data-seg="ground"]       { --card-accent: var(--earth-ground); --card-accent-dim: rgba(58,255,159,0.3); --card-glow: rgba(58,255,159,0.06); animation-delay: 0.5s; }
+    .card[data-seg="earth-ground"]       { --card-accent: var(--earth-ground); --card-accent-dim: rgba(58,255,159,0.3); --card-glow: rgba(58,255,159,0.06); animation-delay: 0.5s; }
     .card[data-seg="geo"]          { --card-accent: var(--geo);    --card-accent-dim: rgba(58,143,255,0.3); --card-glow: rgba(58,143,255,0.06); animation-delay: 0.6s; }
     .card[data-seg="lunar"]        { --card-accent: var(--lunar);  --card-accent-dim: rgba(201,122,255,0.3); --card-glow: rgba(201,122,255,0.06); animation-delay: 0.7s; }
     .card[data-seg="lunar-ground"] { --card-accent: var(--lunar-ground); --card-accent-dim: rgba(255,159,58,0.3); --card-glow: rgba(255,159,58,0.06); animation-delay: 0.8s; }
@@ -345,28 +350,28 @@
     <p class="subtitle">Documentation and analysis across four mission segments.</p>
 
     <div class="orbit-bar">
-      <div class="orbit-node"><div class="orbit-dot" style="background:var(--earth-ground)"></div>Earth Ground</div>
+      <div class="orbit-node" data-seg="earth-ground"><div class="orbit-dot" style="background:var(--earth-ground)"></div>Earth Ground</div>
       <span class="orbit-arrow arrow-left">&lt;</span>
       <div class="orbit-lines">
         <div class="orbit-line"></div>
         <div class="orbit-line"></div>
       </div>
       <span class="orbit-arrow arrow-right">&gt;</span>
-      <div class="orbit-node"><div class="orbit-dot" style="background:var(--geo)"></div>GEO Relay</div>
+      <div class="orbit-node" data-seg="geo"><div class="orbit-dot" style="background:var(--geo)"></div>GEO Relay</div>
       <span class="orbit-arrow arrow-left">&lt;</span>
       <div class="orbit-lines">
         <div class="orbit-line"></div>
         <div class="orbit-line"></div>
       </div>
       <span class="orbit-arrow arrow-right">&gt;</span>
-      <div class="orbit-node"><div class="orbit-dot" style="background:var(--lunar)"></div>Lunar Relay</div>
+      <div class="orbit-node" data-seg="lunar"><div class="orbit-dot" style="background:var(--lunar)"></div>Lunar Relay</div>
       <span class="orbit-arrow arrow-left">&lt;</span>
       <div class="orbit-lines">
         <div class="orbit-line"></div>
         <div class="orbit-line"></div>
       </div>
       <span class="orbit-arrow arrow-right">&gt;</span>
-      <div class="orbit-node"><div class="orbit-dot" style="background:var(--lunar-ground)"></div>Lunar Ground</div>
+      <div class="orbit-node" data-seg="lunar-ground"><div class="orbit-dot" style="background:var(--lunar-ground)"></div>Lunar Ground</div>
     </div>
   </header>
 
@@ -374,7 +379,7 @@
   <div class="section-label">// Mission Segments</div>
   <div class="segments">
 
-    <div class="card" data-seg="ground">
+    <div class="card" data-seg="earth-ground">
       <div class="card-tag">SEG-01</div>
       <h2>Ground Segment</h2>
       <p>Ground station infrastructure, link budgets, and terrestrial communication systems.</p>
